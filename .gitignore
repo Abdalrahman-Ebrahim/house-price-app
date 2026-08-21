@@ -1,0 +1,38 @@
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+
+# Python Cache & Compilation
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Node Modules & Frontend Builds
+node_modules/
+dist/
+build/
+
+# Environment Variables & Logs
+.env
+*.log
+
+# Raw Datasets (CSV)
+*.csv
+data/*.csv
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Exclude heavy model binaries (> 50 MB)
+*.pkl
+backend/models/*.pkl
+
+# Exclude heavy machine learning model files
+*.joblib
+models/*.joblib
+*.pkl
+backend/models/*.pkl

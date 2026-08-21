@@ -13,6 +13,14 @@ An end-to-end Machine Learning web application designed to predict real estate h
 
 ---
 
+## 📸 Application Preview
+
+| Input Form Interface | Prediction Result |
+| :---: | :---: |
+| ![Form Interface](docs/app-interface.png) | ![Prediction Result](docs/app-prediction.png) |
+
+---
+
 ## 🛠️ Tech Stack
 
 * **Machine Learning & Analytics**: Python, Pandas, NumPy, Scikit-Learn, Joblib

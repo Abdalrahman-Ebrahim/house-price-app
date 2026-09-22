@@ -7,8 +7,12 @@ from .api.routes.prediction import router as prediction_router
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    # Load model once at startup
-    model_service.load_model()
+    # Load model with error handling for deployment safety
+    try:
+        model_service.load_model()
+        print("Model loaded successfully!")
+    except Exception as e:
+        print(f"Error loading model on startup: {e}")
     yield
 
 app = FastAPI(

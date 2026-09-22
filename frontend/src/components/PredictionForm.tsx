@@ -43,7 +43,7 @@ export const PredictionForm: React.FC<PredictionFormProps> = ({ onSubmit, isLoad
     return (
         <form onSubmit={handleSubmit} style={styles.form}>
             <div style={styles.field}>
-                <label style={styles.label}>Location / المنطقة</label>
+                <label style={styles.label}>Location</label>
                 <select
                     value={location}
                     onChange={(e) => setLocation(e.target.value)}
@@ -60,7 +60,7 @@ export const PredictionForm: React.FC<PredictionFormProps> = ({ onSubmit, isLoad
             </div>
 
             <div style={styles.field}>
-                <label style={styles.label}>Carpet Area (Sqft) / المساحة الصافية</label>
+                <label style={styles.label}>Carpet Area (SqFt)</label>
                 <input
                     type="number"
                     min="100"
@@ -74,7 +74,7 @@ export const PredictionForm: React.FC<PredictionFormProps> = ({ onSubmit, isLoad
 
             <div style={styles.row}>
                 <div style={styles.field}>
-                    <label style={styles.label}>BHK (Bedrooms)</label>
+                    <label style={styles.label}>Bedrooms (BHK)</label>
                     <input
                         type="number"
                         min="1"
@@ -102,7 +102,7 @@ export const PredictionForm: React.FC<PredictionFormProps> = ({ onSubmit, isLoad
 
             <div style={styles.row}>
                 <div style={styles.field}>
-                    <label style={styles.label}>Floor Number / الطابق</label>
+                    <label style={styles.label}>Floor Number</label>
                     <input
                         type="number"
                         min="0"
@@ -115,7 +115,7 @@ export const PredictionForm: React.FC<PredictionFormProps> = ({ onSubmit, isLoad
                 </div>
 
                 <div style={styles.field}>
-                    <label style={styles.label}>Balcony / الشرفات</label>
+                    <label style={styles.label}>Balcony</label>
                     <input
                         type="number"
                         min="0"
@@ -130,7 +130,7 @@ export const PredictionForm: React.FC<PredictionFormProps> = ({ onSubmit, isLoad
 
             <div style={styles.row}>
                 <div style={styles.field}>
-                    <label style={styles.label}>Furnishing / الفرش</label>
+                    <label style={styles.label}>Furnishing Status</label>
                     <select
                         value={furnishing}
                         onChange={(e) => setFurnishing(e.target.value)}
@@ -143,7 +143,7 @@ export const PredictionForm: React.FC<PredictionFormProps> = ({ onSubmit, isLoad
                 </div>
 
                 <div style={styles.field}>
-                    <label style={styles.label}>Transaction / نوع البيع</label>
+                    <label style={styles.label}>Transaction Type</label>
                     <select
                         value={transaction}
                         onChange={(e) => setTransaction(e.target.value)}
@@ -156,7 +156,7 @@ export const PredictionForm: React.FC<PredictionFormProps> = ({ onSubmit, isLoad
             </div>
 
             <button type="submit" disabled={isLoading} style={styles.button}>
-                {isLoading ? 'Calculating...' : 'Predict Price / توقع السعر'}
+                {isLoading ? 'Calculating...' : 'Predict Price'}
             </button>
         </form>
     );

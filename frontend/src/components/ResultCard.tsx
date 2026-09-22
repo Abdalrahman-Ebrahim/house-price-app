@@ -8,7 +8,7 @@ interface ResultCardProps {
 export const ResultCard: React.FC<ResultCardProps> = ({ result }) => {
     return (
         <div style={styles.card}>
-            <h3 style={styles.title}>نتيجة التوقع</h3>
+            <h3 style={styles.title}>Estimated Price (USD):</h3>
             <p style={styles.price}>
                 {result.predicted_price.toLocaleString()} {result.currency || 'USD'}
             </p>

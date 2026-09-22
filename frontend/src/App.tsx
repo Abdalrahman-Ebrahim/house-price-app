@@ -8,7 +8,6 @@ export default function App() {
   const [result, setResult] = useState<PredictionResponse | null>(null);
   const [error, setError] = useState<string | null>(null);
 
-  // سعر الصرف من الروبية الهندية إلى الدولار الأمريكي (1 USD = 83.5 INR)
   const USD_EXCHANGE_RATE = 83.5;
 
   const handlePredict = async (input: PredictionInput) => {
@@ -23,14 +22,13 @@ export default function App() {
       if (err instanceof Error) {
         setError(err.message);
       } else {
-        setError('حدث خطأ غير متوقع');
+        setError('An unexpected error occurred. Please try again.');
       }
     } finally {
       setLoading(false);
     }
   };
 
-  // حساب السعر بالدولار
   const calculatedPriceInUSD =
     result && typeof result.predicted_price === 'number'
       ? result.predicted_price / USD_EXCHANGE_RATE
@@ -40,7 +38,7 @@ export default function App() {
     <div style={styles.container}>
       <header style={styles.header}>
         <h1 style={styles.title}>🏠 House Price Predictor</h1>
-        <p style={styles.subtitle}>توقع أسعار العقارات باستخدام نماذج الذكاء الاصطناعي</p>
+        <p style={styles.subtitle}>Predict house prices using AI models</p>
       </header>
 
       <main>
@@ -54,7 +52,7 @@ export default function App() {
 
         {calculatedPriceInUSD !== null && (
           <div style={styles.resultBox}>
-            <h2 style={styles.resultTitle}>السعر المتوقع بالدولار الأمريكي:</h2>
+            <h2 style={styles.resultTitle}>Estimated Price (USD):</h2>
             <p style={styles.priceText}>
               ${' '}
               {calculatedPriceInUSD.toLocaleString(undefined, {

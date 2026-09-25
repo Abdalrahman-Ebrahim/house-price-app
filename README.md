@@ -1,6 +1,13 @@
-# 🏡 Real Estate House Price Prediction
+# 🏠 Real Estate House Price Prediction
 
 An end-to-end Machine Learning web application designed to predict real estate house prices. This project features a trained ML regression pipeline, a high-performance **FastAPI** backend for serving predictions, and an interactive **React (Vite + TypeScript)** frontend interface.
+
+---
+
+### 🌐 Live Demo & Deployment
+[![Live Demo](https://img.shields.io/badge/Vercel-Live%20Demo-brightgreen?style=for-the-badge&logo=vercel)](https://house-price-frontend-peach.vercel.app/)
+
+👉 **Try the Live Application:** [https://house-price-frontend-peach.vercel.app/](https://house-price-frontend-peach.vercel.app/)
 
 ---
 
